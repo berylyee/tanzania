@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tanzania — My Travel Scrapbook</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home">Tanzania <span>♥</span></a>
+    <div class="header-actions">
+      <button class="ghost-btn" id="exportBtn">Export journal</button>
+      <button class="edit-btn" id="editAllBtn">Edit journal</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="home-page page active">
+      <div class="intro">
+        <p class="eyebrow">11 days • 1 incredible journey</p>
+        <h1>My Tanzania<br><em>Travel Scrapbook</em></h1>
+        <p class="intro-copy">A little collection of places, wildlife, people and moments from my journey through northern Tanzania.</p>
+      </div>
+
+      <div class="map-card">
+        <div class="map-wrap">
+          <img src="assets/tanzania-route-map.png" alt="Hand-drawn map of my Tanzania route" />
+          <div class="route-links" aria-label="Clickable days in My Tanzania Route">
+            <button class="route-link r1" data-day="1" aria-label="Day 1 — Arusha"></button>
+            <button class="route-link r2" data-day="2" aria-label="Day 2 — Arusha National Park"></button>
+            <button class="route-link r3" data-day="3" aria-label="Day 3 — Tarangire National Park"></button>
+            <button class="route-link r4" data-day="4" aria-label="Day 4 — Ngorongoro Crater"></button>
+            <button class="route-link r5" data-day="5" aria-label="Day 5 — Central Serengeti"></button>
+            <button class="route-link r67" data-day="6-7" aria-label="Days 6–7 — North Serengeti"></button>
+            <button class="route-link r8" data-day="8" aria-label="Day 8 — Central Serengeti"></button>
+            <button class="route-link r9" data-day="9" aria-label="Day 9 — Hadzabe and Datoga"></button>
+            <button class="route-link r10" data-day="10" aria-label="Day 10 — Materuni Village"></button>
+            <button class="route-link r11" data-day="11" aria-label="Day 11 — Rau Forest"></button>
+          </div>
+        </div>
+        <div class="map-caption">Tap a day on the map to open its story ✦</div>
+      </div>
+
+    </section>
+
+    <section id="detail" class="detail-page page" aria-live="polite">
+      <button class="back-btn" id="backBtn">← Back to map</button>
+      <div id="detailContent"></div>
+    </section>
+  </main>
+
+  <footer>Same earth, new stories · Tanzania</footer>
+
+  <template id="dayCardTemplate">
+    <article class="day-card">
+      <button class="day-card-button">
+        <span class="day-number"></span>
+        <span class="day-card-text">
+          <strong class="day-place"></strong>
+          <small class="day-highlight"></small>
+        </span>
+        <span class="arrow">↗</span>
+      </button>
+    </article>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
